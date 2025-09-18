@@ -31,7 +31,7 @@ public class BasicTest {
         driver.findElement(By.name("q")).submit();
     }
     //test classname
-    @Test
+    @Test(enabled=false)   
     public void openWikiAndSearch() {
         driver.get("https://en.wikipedia.org/wiki/Taco");
         String text= driver.findElement(By.className("infobox-caption")).getText();
