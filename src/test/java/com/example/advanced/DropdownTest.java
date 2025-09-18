@@ -4,7 +4,9 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -24,6 +26,15 @@ public class DropdownTest {
         // Select dropdown option by visible text
         driver.findElement(By.id("dropdown")).click();
         driver.findElement(By.xpath("//option[text()='Option 2']")).click();
+
+        // WebElement dropdown = driver.findElement(By.id("country"));
+        // Select select = new Select(dropdown);
+        // By visible text
+        // select.selectByVisibleText("Canada");
+        // By index
+        // select.selectByIndex(2);
+        // By value
+        // select.selectByValue("CA");
         
         // Verify the selected option
         String selectedOption = driver.findElement(By.xpath("//option[@selected='selected']")).getText();
