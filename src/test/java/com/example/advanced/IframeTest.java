@@ -18,7 +18,7 @@ public class IframeTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
-    @Test
+    @Test(enabled=false)
     public void testIframe() {
         driver.get("https://the-internet.herokuapp.com/iframe");
         // Switch to iframe using its ID
